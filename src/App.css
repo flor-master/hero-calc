@@ -65,35 +65,52 @@ html, body {
 
   grid-template-areas:
     "A A A A   A A A A"
+    "A A A A   A A A A"
     "B B B B   C C C C";
 }
 .view {
-  border: solid 1px;
   height: 100%;
   grid-area: A;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 54px;
+  font-size: 84px;
+  background: #f9f9f9;
   /* grid-column: 2; */
 }
-.inc {
-  /* height: 100%; */
-  grid-area: C;
-  border: solid 1px;
+.button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 54px;
+  font-size: 65px;
+  transition: background-color 0.1s ease-in-out;
+}
+.button:hover {
+  cursor: pointer;
+}
+.inc {
+  grid-area: C;
   background: #da2c38;
+  box-shadow: inset 0 0 20px #c62732;
+}
+.inc:hover {
+  background: #c62732;
 }
 .dec {
-  /* height: 100%; */
   grid-area: B;
-  border: solid 1px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 54px;
   background: #226f54;
+  box-shadow: inset 0 0 20px #1d6049;
+}
+.dec:hover {
+  background: #1d6049;
+}
+.reset {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  font-size: 45px;
+  padding: 8px 12px;
 }
