@@ -93,7 +93,8 @@ html, body {
   background: #da2c38;
   box-shadow: inset 0 0 20px #c62732;
 }
-.inc:hover {
+.inc:hover,
+.dec:active {
   background: #c62732;
 }
 .dec {
@@ -101,7 +102,8 @@ html, body {
   background: #226f54;
   box-shadow: inset 0 0 20px #1d6049;
 }
-.dec:hover {
+.dec:hover,
+.dec:active {
   background: #1d6049;
 }
 .reset {
@@ -114,4 +116,7 @@ html, body {
   font-size: 45px;
   padding: 8px 12px;
   color: #000;
+}
+.reset:hover {
+  cursor: pointer;
 }

@@ -2,12 +2,9 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
-  const readFromStorage = () => {
-    const tmp = localStorage.getItem('score')
-    console.log(tmp, parseInt(tmp));
-    return  parseInt(tmp) || 0
-  }
+  const readFromStorage = () => parseInt(localStorage.getItem('score')) || 0
   const [count, setCount] = useState(readFromStorage())
+
   function increaseCount() {
     setCount((count) => parseInt(count) + 1)
   }
@@ -17,6 +14,7 @@ function App() {
   function resetCount() {
     setCount(0)
   }
+
   useEffect(() => {
     localStorage.setItem('score', count)
   }, [count])
